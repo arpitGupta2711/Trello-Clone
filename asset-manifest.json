@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/github.io/Trello-Clone/static/css/main.6b4e8bcb.css",
+    "main.js": "/github.io/Trello-Clone/static/js/main.69186068.js",
+    "index.html": "/github.io/Trello-Clone/index.html",
+    "main.6b4e8bcb.css.map": "/github.io/Trello-Clone/static/css/main.6b4e8bcb.css.map",
+    "main.69186068.js.map": "/github.io/Trello-Clone/static/js/main.69186068.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b4e8bcb.css",
+    "static/js/main.69186068.js"
+  ]
+}
