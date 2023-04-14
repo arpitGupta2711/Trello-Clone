@@ -5,8 +5,6 @@ export const listReducerSlice = createSlice({
   initialState: [],
   reducers: {
     editCard: (state, action) => {
-      console.log("herer");
-      console.log(action.payload);
       const { listId, cardId, text } = action.payload;
 
       state.forEach((list) => {
@@ -25,9 +23,7 @@ export const listReducerSlice = createSlice({
     getList: (state) => {
       const lists = JSON.parse(localStorage.getItem("lists"));
 
-      console.log(typeof lists);
       if (lists == null) {
-        console.log("emoty");
       } else {
         return [...lists];
       }
@@ -64,7 +60,6 @@ export const listReducerSlice = createSlice({
       return newState;
     },
     dragHappened: (state, action) => {
-      console.log(action.payload);
       const {
         droppableIdStart,
         droppableIdEnd,
@@ -82,7 +77,6 @@ export const listReducerSlice = createSlice({
         localStorage.setItem("lists", JSON.stringify(a));
         return nState;
       }
-      console.log("newState", newState);
       if (parseInt(droppableIdEnd) === parseInt(droppableIdStart)) {
         state.forEach((list) => {
           if (parseInt(list.id) === parseInt(droppableIdStart)) {
@@ -104,7 +98,6 @@ export const listReducerSlice = createSlice({
             return list;
           }
         });
-        console.log("card", card);
         state.forEach((list) => {
           if (parseInt(list.id) === parseInt(droppableIdEnd)) {
             list.cards.splice(droppableIndexEnd, 0, ...card);

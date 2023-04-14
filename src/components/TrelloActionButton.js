@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Icon } from "@mui/material";
-import {  TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { Card, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addList, addCard } from "../store/listReducerSlice";
@@ -33,15 +33,12 @@ const TrelloActionButton = (props) => {
     });
   };
   const handleInputChange = (e) => {
-    // console.log(e.target.value);
     setFormOpen((prev) => {
       return { ...prev, text: e.target.value };
     });
   };
   const handleAddList = (e) => {
-    // console.log("hello");
     const text = formOpen.text;
-    console.log(text);
     if (text) {
       dispatch(addList(text));
       setFormOpen({ value: false, text: "" });
@@ -49,9 +46,7 @@ const TrelloActionButton = (props) => {
     return null;
   };
   const handleAddCard = (e) => {
-    // console.log("hello");
     const text = formOpen.text;
-    // console.log(text);
     if (text) {
       dispatch(addCard({ text: text, id: props.id }));
       setFormOpen({ value: false, text: "" });
@@ -83,32 +78,25 @@ const TrelloActionButton = (props) => {
         <div style={style}>
           <Card
             style={{
-              // width:'80px',
               minHeight: 85,
               minWidth: 234,
               padding: "6px 8px 2px",
             }}
           >
             <TextField
-              //  variant="standard"
               placeholder={placeholder}
               required
               autoFocus
               onBlur={closeForm}
               multiline
-              // color="neutral"
               sx={{
                 backgroundColor: "white",
                 "& fieldset": { border: "none" },
                 overflow: "hidden",
                 padding: "0",
-                // height:'100%'
               }}
               value={formOpen.text}
               onChange={handleInputChange}
-              // id="outlined-basic"
-              // variant="outlined"
-              // variant="filled"
             />
           </Card>
           <div style={styles.formButtonGroup}>

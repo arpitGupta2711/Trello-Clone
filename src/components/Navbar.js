@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button, Link } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import HoverButton from "./HoverButton";
 import PublicIcon from "@mui/icons-material/Public";
@@ -9,9 +9,7 @@ import { Avatar } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useState } from "react";
-// import Divider from './Dividers'
-// import './Navbar.css'
+
 const Navbar = () => {
   function stringAvatar(name) {
     return {
@@ -41,27 +39,26 @@ const Navbar = () => {
             fontWeight: "700",
             lineHeight: "32px",
             padding: "0 12px",
-            // left:0,
+
             right: 0,
           }}
           variant="h6"
           component="h1"
         >
-          FE-ASSIGNMENT
+          Trello-Clone
         </Typography>
 
         <Button
           sx={{
             borderRadius: "3px",
             backgroundColor: "rgba(255, 255, 255, 0.2)",
-            // height:'24px',
-            // width:'34px',
+
             padding: "4px 6px",
 
             color: "white",
             height: "32px",
             width: "32px",
-            // marginRight:'10px',
+
             minWidth: "0",
             "&:hover": {
               backgroundColor: "rgba(255, 255, 255, 0.2)",
@@ -72,19 +69,14 @@ const Navbar = () => {
             sx={{
               fontSize: "16px",
               transition: "font-size 0.2s ease-in-out",
-              // backgroundColor: "rgba(255, 255, 255, 0.2)",
 
               "&:hover": {
                 fontSize: "20px",
                 color: "yellow",
-                // transform: scale(1.2)
-                // backgroundColor: "rgba(255, 255, 255, 0.2)",
               },
             }}
           />
         </Button>
-
-        {/* <Button sx={{backgroundColor:'rgba(255, 255, 255, 0.2)'}}>Login</Button> */}
 
         <Divider
           sx={{
@@ -136,34 +128,8 @@ const Navbar = () => {
           flexItem
         />
 
-        {/* <HoverButton
-          Text={
-            <span
-              style={{
-                padding: "0px 3px",
-                margin: "0px 0px",
-                fontWeight: "400",
-              }}
-            >
-              Board
-            </span>
-          }
-          styles={{
-            display: "flex",
-            color: "white",
-            fontSize: "14px",
-            padding: "4px 6px",
-          }}
-          Component={
-            <PublicIcon
-              sx={{ fontSize: "16px", padding: "4px  6px  4px 2px" }}
-            />
-          }
-        /> */}
-
         <Button
           sx={{
-            // backgroundColor:hover?"rgba(255, 255, 255, 0.3)":'rgba(255, 255, 255, 0.2)',
             backgroundColor: "rgb(235, 236, 240)",
             "&:hover": {
               backgroundColor: "white",
@@ -174,13 +140,8 @@ const Navbar = () => {
             borderRadius: "3px",
             fontSize: "14px",
             padding: "4px 6px",
-            // backgroundColor: hover
-            //   ? "yellow"
-            //   : "rgb(235, 236, 240)",
-            // textTransform: "none",
-            marginRight: "5px",
 
-            // transition:'none'
+            marginRight: "5px",
           }}
         >
           <svg
@@ -230,7 +191,7 @@ const Navbar = () => {
             color: "white",
             fontSize: "14px",
             padding: "4px 6px",
-            // margin:'50%',
+
             marginRight: "46%",
             minWidth: "0px",
           }}
@@ -299,7 +260,6 @@ const Navbar = () => {
               position: "absolute",
               height: "13px",
               width: "15px",
-              // bottom:'0',
               top: "19px",
               right: "0",
             }}

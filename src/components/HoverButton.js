@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import { useState } from "react";
 
-const HoverButton = ({ text, styles, Component, Text }) => {
+const HoverButton = ({  styles, Component, Text }) => {
   const [hover, setHover] = useState(false);
 
   const handleMouseOver = () => {

@@ -18,10 +18,8 @@ const TrelloCard = ({ text, id, index, listId }) => {
   const handleEdit = () => {
     setOpen(true);
     setInput(text);
-    console.log(listId);
   };
   const handleBlur = () => {
-    console.log("blur");
     setOpen(false);
     setEditIcon(false);
   };
@@ -29,8 +27,6 @@ const TrelloCard = ({ text, id, index, listId }) => {
     setInput(e.target.value);
   };
   const handleSave = () => {
-    console.log("function");
-    // console.log('here',input);
     if (input !== "") {
       dispatch(editCard({ listId: listId, cardId: id, text: input }));
       setEditIcon(false);
@@ -100,7 +96,6 @@ const TrelloCard = ({ text, id, index, listId }) => {
                           fontSize: "16px",
                           height: "20px",
                           lineHeight: "20px",
-                          // width: "20px",
                           color: "#42526e",
                         }}
                         onClick={handleEdit}
@@ -124,7 +119,6 @@ const TrelloCard = ({ text, id, index, listId }) => {
               />
 
               <Button
-              
                 variant="contained"
                 style={{
                   color: "white",
